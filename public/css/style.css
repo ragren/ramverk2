@@ -1,0 +1,53 @@
+.navbar {
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f6f8fa;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #111;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    margin-top: -20px;
+    background-color: #f6f8fa;
+}
+
+.head-spacing {
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+.main {
+    margin: 0 auto;
+    overflow: auto;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 2em;
+    max-width: 500px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.foot-spacing {
+    margin-top: 30px;
+}
+
+.title {
+    padding-top: 2em;
+    font-size: 22px;
+}
+
+@media (max-width: 720px) {
+    .main {
+        max-width: 80%;
+    }
+}

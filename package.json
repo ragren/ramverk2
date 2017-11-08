@@ -1,0 +1,32 @@
+{
+  "name": "redovisa",
+  "version": "1.0.0",
+  "description": "sida för redovisning i kursen ramverk2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Rasmus Ågren",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^4.1.10",
+    "codecov": "^3.0.0",
+    "coveralls": "^3.0.0",
+    "eslint": "^4.10.0",
+    "eslint-plugin-pug": "^1.1.0",
+    "eslint-plugin-react": "^7.4.0",
+    "html-minifier": "^3.5.6",
+    "htmlhint": "^0.9.13",
+    "js-yaml": "^3.10.0",
+    "jsonlint": "^1.6.2",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "stylelint": "^8.2.0",
+    "uglify-es": "^3.1.7"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "jstransformer-markdown-it": "^2.0.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}
