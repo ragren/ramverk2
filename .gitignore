@@ -1,4 +1,3 @@
-/.circleci
 /.bin
 node_modules/
 build/
