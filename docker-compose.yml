@@ -1,0 +1,36 @@
+version: "3"
+services:
+    node_latest:
+        image: "node:latest"
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - DBWEBB_PORT=8071
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - "8071:8071"
+        command: "npm start"
+    node_8:
+        image: "node:8"
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - DBWEBB_PORT=8070
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - "8070:8070"
+        command: "npm start"
+
+    node_6:
+        image: "node:6"
+        user: "node"
+        working_dir: /home/node/app
+        environment:
+            - DBWEBB_PORT=8056
+        volumes:
+            - ./:/home/node/app
+        ports:
+            - "8056:8056"
+        command: "npm start"

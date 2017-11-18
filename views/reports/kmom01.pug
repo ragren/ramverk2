@@ -1,9 +1,24 @@
 p.title kmom01
-<b>Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.</b>
-<p>Än så länge tycker jag att det fungerar bra med Express och Pug. Express som ramverk känns enklare att förtstå och det är färre steg som man behöver ta för att komma igång. Tillskillnad från det "ramverkslösa ramverket" som vi använde i förra kursen så känns det som att man kan uppnå samma resultat med mindre kod. Jag gillar att använda mig av JavaScript vilket antagligen också hjälper till att koden är lättare att läsa av. Pug tycker jag är lite jobbigt att använda då det känns som ett hybrid av html och markdown. Koden i pug är ofta beroende av tabningar vilket gör att koden lätt blir väldigt lång horisontellt. Särskillt eftersom man inte kan använda sig av radbrytningar i koden.</p>
-<b>Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?</b>
-<p>Jag utgick i från strukturen som fanns i övningen men ändrade en del i hur header, navbar och övriga filer är placerade. Jag försökte dela upp koden så mycket som möjligt och placera varje fil tillsammans med liknande filer (navbar, header, footer tillsammans t.ex.). Sedan använder jag index.js där övrig kod är samlad gällande routrar osv. Denna fil vill jag dock dela upp och placera routrarna i en separat fil i nästa kursmoment. Just nu fungerar det bra eftersom det inte är så mycket kod i index.js, men allt eftersom vi lägger till fler funktioner kan det vara värt att se till att koden fortfarande är överskådlig. Här hade express generatorn en bra mall att gå efter som jag kommer kika närmare på framöver.</p>
-<b>Använde du någon form av scaffolding som Express erbjuder?</b>
-<p>Jag började detta kursmoment med att använda express generatorn för att se hur det exemplet var uppbyggt. I slutändan blev det ändå en liknande struktur som i övningen för att jag redan satt mig in i hur den var uppbyggd. Jag är dock sugen på att strukturera om koden framöver och kan mycket väl gå tillbaka till t.ex. express generatorn och dess struktur.</p>
-<b>Jobbar du med Markdown för innehållet, eller annat liknande?</b>
-<p>Nej, jag skrev innehållet i Pug. Men jag känner så här i efterhand att Pug var ganska jobbigt att använda för att skriva längre text. Jag kommer antagligen att strukterera om koden i kommande kursmoment och då blir det antagligen markdown istället. Anledningen att jag valde Pug var för att det kändes smidigt att ha alla "view" filer i samma format.</p>
+:markdown-it(linkify langPrefix='highlight-')
+    ### Berätta utförligt om din syn på Express och Pug och hur de samverkar. Relatera till andra ramverk du jobbat med. Lyft fram de fördelar och eventuellt nackdelar du finner, eller bara notera skillnader och likheter.
+    Än så länge tycker jag att det fungerar bra med Express och Pug. Express som ramverk känns enklare att förtstå och det är färre steg som man behöver ta för att komma igång.
+    Tillskillnad från det "ramverkslösa ramverket" som vi använde i förra kursen så känns det som att man kan uppnå samma resultat med mindre kod.
+    Jag gillar att använda mig av JavaScript vilket antagligen också hjälper till att koden är lättare att läsa av.
+    Pug tycker jag är lite jobbigt att använda då det känns som ett hybrid av html och markdown. Koden i pug är ofta beroende av tabningar vilket gör att koden lätt blir väldigt lång horisontellt.
+    Särskillt eftersom man inte kan använda sig av radbrytningar i koden.
+    ### Berätta om din katalogstruktur och hur du organiserade din kod, hur tänkte du?
+    Jag utgick i från strukturen som fanns i övningen men ändrade en del i hur header, navbar och övriga filer är placerade.
+    Jag försökte dela upp koden så mycket som möjligt och placera varje fil tillsammans med liknande filer (navbar, header, footer tillsammans t.ex.).
+    Sedan använder jag index.js där övrig kod är samlad gällande routrar osv.
+    Denna fil vill jag dock dela upp och placera routrarna i en separat fil i nästa kursmoment.
+    Just nu fungerar det bra eftersom det inte är så mycket kod i index.js, men allt eftersom vi lägger till fler funktioner kan det vara värt att se till att koden fortfarande är överskådlig.
+    Här hade express generatorn en bra mall att gå efter som jag kommer kika närmare på framöver.
+    ### Använde du någon form av scaffolding som Express erbjuder?
+    Jag började detta kursmoment med att använda express generatorn för att se hur det exemplet var uppbyggt.
+    I slutändan blev det ändå en liknande struktur som i övningen för att jag redan satt mig in i hur den var uppbyggd.
+    Jag är dock sugen på att strukturera om koden framöver och kan mycket väl gå tillbaka till t.ex. express generatorn och dess struktur.
+    ### Jobbar du med Markdown för innehållet, eller annat liknande?
+    Nej, jag skrev innehållet i Pug.
+    Men jag känner så här i efterhand att Pug var ganska jobbigt att använda för att skriva längre text.
+    Jag kommer antagligen att strukterera om koden i kommande kursmoment och då blir det antagligen markdown istället.
+    Anledningen att jag valde Pug var för att det kändes smidigt att ha alla "view" filer i samma format.
