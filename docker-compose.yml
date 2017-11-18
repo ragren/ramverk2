@@ -34,3 +34,4 @@ services:
         ports:
             - "8056:8056"
         command: "npm start"
+ 
