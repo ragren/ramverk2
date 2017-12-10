@@ -1,18 +1,12 @@
-checks:
-    javascript: true
+# ramverk2
+[![Build Status](https://travis-ci.org/ragren/ramverk2.svg?branch=master)](https://travis-ci.org/ragren/ramverk2)
 
-build:
-    environment:
-        node: 'v8.9.0'
+[![Maintainability](https://api.codeclimate.com/v1/badges/33b513d811911f5b8f9c/maintainability)](https://codeclimate.com/github/ragren/ramverk2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/33b513d811911f5b8f9c/test_coverage)](https://codeclimate.com/github/ragren/ramverk2/test_coverage)
 
-    #dependencies:
-        #before:
-            #- npm install istanbul   # or add it as part of your package.json
+[![codecov](https://codecov.io/gh/ragren/Ramverk2/branch/master/graph/badge.svg)](https://codecov.io/gh/ragren/Ramverk2)
 
-    tests:
-        override:
-            -
-                command: 'npm run scrutinizer'
-                coverage:
-                    file: 'coverage/clover.xml'
-                    format: 'clover'
+[![Code Coverage](https://scrutinizer-ci.com/g/ragren/Ramverk2/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/ragren/Ramverk2/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/ragren/Ramverk2/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ragren/Ramverk2/build-status/master)
+
+me-sida för kursen ramverk 2
