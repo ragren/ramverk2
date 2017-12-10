@@ -53,7 +53,9 @@ SHELLCHECK := $(BIN)/shellcheck
 BATS       := $(BIN)/bats
 
 HTMLHINT  := $(NODEMODBIN)/htmlhint
+CSSLINT   := $(NODEMODBIN)/csslint
 STYLELINT := $(NODEMODBIN)/stylelint
+JSCS      := $(NODEMODBIN)/jscs
 ESLINT    := $(NODEMODBIN)/eslint
 JSONLINT  := $(NODEMODBIN)/jsonlint
 JSYAML    := $(NODEMODBIN)/js-yaml
@@ -123,13 +125,13 @@ check: check-tools-js #check-tools-bash check-tools-php
 .PHONY: test
 test: htmlhint stylelint eslint jsunittest
 	@$(call HELPTEXT,$@)
-	[ ! -f composer.json ] || composer validate
+	[ ! -f composer.json ] || composer validate
 
 
 
 # target: doc                - Generate documentation.
 .PHONY: doc
-doc: 
+doc:
 	@$(call HELPTEXT,$@)
 
 
@@ -145,7 +147,7 @@ build: test doc #theme less-compile less-minify js-minify
 .PHONY:  install
 install: prepare install-tools-js #install-tools-php install-tools-bash
 	@$(call HELPTEXT,$@)
-
+	[ ! -f package.json ] || npm install
 
 
 # target: update             - Update the codebase and tools.
@@ -197,7 +199,9 @@ check-tools-js:
 	@$(call CHECK_VERSION, node)
 	@$(call CHECK_VERSION, npm)
 	@$(call CHECK_VERSION, $(HTMLHINT))
+	@$(call CHECK_VERSION, $(CSSLINT))
 	@$(call CHECK_VERSION, $(STYLELINT))
+	@$(call CHECK_VERSION, $(JSCS))
 	@$(call CHECK_VERSION, $(ESLINT))
 	@$(call CHECK_VERSION, $(JSONLINT))
 	@$(call CHECK_VERSION, $(JSYAML))
@@ -219,6 +223,14 @@ htmlhint:
 
 
 
+# target: csslint            - CSSlint.
+.PHONY: csslint
+csslint:
+	@$(call HELPTEXT,$@)
+	[ ! -f .csslintrc ] || $(CSSLINT) .
+
+
+
 # target: stylelint          - Stylelint (alternative csslint).
 .PHONY: stylelint
 stylelint:
@@ -232,6 +244,14 @@ stylelint:
 stylelint-fix:
 	@$(call HELPTEXT,$@)
 	[ ! -f .stylelintrc.json ] || $(STYLELINT) **/*.css --fix
+
+
+
+# target: jscs               - JavaScript code style.
+.PHONY: jscs
+jscs:
+	@$(call HELPTEXT,$@)
+	[ ! -f .jscsrc ] || $(JSCS) .
 
 
 
@@ -259,8 +279,7 @@ ifneq ($(wildcard .nycrc),)
 	[ ! -d test ] || $(NYC) $(MOCHA) --reporter dot 'test/**/*.js'
 else
 	[ ! -d test ] || $(MOCHA) --reporter dot 'test/**/*.js'
-endif 
-
+endif
 
 
 

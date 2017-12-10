@@ -4,7 +4,10 @@
   "description": "sida för redovisning i kursen ramverk2",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "nyc --reporter=html --reporter=text mocha -- test/**/*.js",
+    "report-coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "report-codecov": "nyc report --reporter=lcov > coverage.lcov && codecov"
   },
   "author": "Rasmus Ågren",
   "license": "ISC",
@@ -17,6 +20,7 @@
     "eslint-plugin-react": "^7.4.0",
     "html-minifier": "^3.5.6",
     "htmlhint": "^0.9.13",
+    "javascript-style-guide": "^0.9.10",
     "js-yaml": "^3.10.0",
     "jsonlint": "^1.6.2",
     "mocha": "^4.0.1",
@@ -27,6 +31,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "jstransformer-markdown-it": "^2.0.0",
+    "make": "^0.8.1",
     "pug": "^2.0.0-rc.4"
   }
 }

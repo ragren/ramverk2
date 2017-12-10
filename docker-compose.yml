@@ -34,4 +34,27 @@ services:
         ports:
             - "8056:8056"
         command: "npm start"
- 
+
+    test1:
+        build:
+            context: .
+            dockerfile: docker/docker-6
+        user: "node"
+        volumes:
+            - ./:/home/node/app/
+
+    test2:
+        build:
+            context: .
+            dockerfile: docker/docker-8
+        user: "node"
+        volumes:
+            - ./:/home/node/app/
+
+    test3:
+        build:
+            context: .
+            dockerfile: docker/docker-latest
+        user: "node"
+        volumes:
+            - ./:/home/node/app/
